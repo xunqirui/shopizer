@@ -23,8 +23,8 @@
         </processorPath>
         <module name="sm-core-model" />
         <module name="sm-core-modules" />
-        <module name="sm-shop-model" />
         <module name="sm-shop" />
+        <module name="sm-shop-model" />
         <module name="sm-core" />
       </profile>
     </annotationProcessing>
