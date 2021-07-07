@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for shopizer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/maven/repository/org/mapstruct/mapstruct-processor/1.3.0.Final/mapstruct-processor-1.3.0.Final.jar" />
+          <entry name="$USER_HOME$/maven/repository/com/jolira/hickory/1.0.0/hickory-1.0.0.jar" />
+          <entry name="$USER_HOME$/maven/repository/org/mapstruct/mapstruct/1.3.0.Final/mapstruct-1.3.0.Final.jar" />
+          <entry name="$USER_HOME$/maven/repository/junit/junit/4.12/junit-4.12.jar" />
+          <entry name="$USER_HOME$/maven/repository/org/assertj/assertj-core/3.11.1/assertj-core-3.11.1.jar" />
+          <entry name="$USER_HOME$/maven/repository/com/google/guava/guava/19.0/guava-19.0.jar" />
+          <entry name="$USER_HOME$/maven/repository/com/puppycrawl/tools/checkstyle/8.14/checkstyle-8.14.jar" />
+          <entry name="$USER_HOME$/maven/repository/javax/inject/javax.inject/1/javax.inject-1.jar" />
+          <entry name="$USER_HOME$/maven/repository/org/codehaus/plexus/plexus-container-default/1.6/plexus-container-default-1.6.jar" />
+          <entry name="$USER_HOME$/maven/repository/org/springframework/spring-test/4.0.3.RELEASE/spring-test-4.0.3.RELEASE.jar" />
+          <entry name="$USER_HOME$/maven/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar" />
+          <entry name="$USER_HOME$/maven/repository/org/springframework/spring-context/4.0.3.RELEASE/spring-context-4.0.3.RELEASE.jar" />
+          <entry name="$USER_HOME$/maven/repository/joda-time/joda-time/2.9/joda-time-2.9.jar" />
+        </processorPath>
+        <module name="sm-core-model" />
+        <module name="sm-core-modules" />
+        <module name="sm-shop-model" />
+        <module name="sm-shop" />
+        <module name="sm-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shopizer" target="1.8" />
+      <module name="sm-core" target="1.8" />
+      <module name="sm-core-model" target="1.8" />
+      <module name="sm-core-modules" target="1.8" />
+      <module name="sm-shop" target="1.8" />
+      <module name="sm-shop-model" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sm-core" options="-parameters" />
+      <module name="sm-core-model" options="-parameters" />
+      <module name="sm-core-modules" options="-parameters" />
+      <module name="sm-shop" options="-parameters" />
+      <module name="sm-shop-model" options="-parameters" />
+    </option>
+  </component>
+</project>
