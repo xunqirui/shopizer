@@ -31,6 +31,7 @@
         <module>sm-core</module>
         <module>sm-shop-model</module>
         <module>sm-shop</module>
+        <module>middleware-frameworks</module>
     </modules>
 
     <properties>
@@ -82,6 +83,12 @@
         <!-- jacoco coverage -->
         <coverage.lines>.30</coverage.lines>
         <coverage.branches>.37</coverage.branches>
+
+        <!-- MicroProfile 版本-->
+        <microprofile-config-api.version>2.0</microprofile-config-api.version>
+
+        <!-- Artifacts 依赖版本 -->
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
 
     </properties>
 
@@ -411,6 +418,20 @@
                 <groupId>javax.annotation</groupId>
                 <artifactId>javax.annotation-api</artifactId>
                 <version>${javax.annotation}</version>
+            </dependency>
+
+            <!-- MicroProfile -->
+            <dependency>
+                <groupId>org.eclipse.microprofile.config</groupId>
+                <artifactId>microprofile-config-api</artifactId>
+                <version>${microprofile-config-api.version}</version>
+            </dependency>
+
+            <!-- Servlet 3.1 API -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax.servlet-api.version}</version>
             </dependency>
 
         </dependencies>
