@@ -481,6 +481,37 @@ public abstract class ClassUtils {
     }
 
     /**
+     * the semantics is same as {@link Class#isAssignableFrom(Class)}
+     *
+     * @param targetType the target type
+     * @param superTypes the super types
+     * @return see {@link Class#isAssignableFrom(Class)}
+     * @since 1.0.0
+     */
+    public static boolean isDerived(Class<?> targetType, Class<?>... superTypes) {
+        // any argument is null
+        if (superTypes == null || superTypes.length == 0 || targetType == null) {
+            return false;
+        }
+        boolean derived = false;
+        for (Class<?> superType : superTypes) {
+            if (isAssignableFrom(superType, targetType)) {
+                derived = true;
+                break;
+            }
+        }
+        return derived;
+    }
+
+    public static Class<?>[] getTypes(Object... args) {
+        Class[] types = new Class[args.length];
+        for (int i = 0; i < args.length; i++) {
+            types[i] = args[i].getClass();
+        }
+        return types;
+    }
+
+    /**
      * Test the specified class name is present in the {@link ClassLoader}
      *
      * @param className   the name of {@link Class}

@@ -78,6 +78,9 @@
         <jwt.version>0.8.0</jwt.version>
         <javax.ws.rs-api.version>2.0.1</javax.ws.rs-api.version>
         <javax.cdi-api.version>2.0</javax.cdi-api.version>
+        <javax.interceptor-api.version>1.2</javax.interceptor-api.version>
+        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <cglib.version>3.3.0</cglib.version>
 
 
         <!-- api documentation -->
@@ -93,8 +96,6 @@
         <microprofile-fault-tolerance-api.version>3.0</microprofile-fault-tolerance-api.version>
         <microprofile-reactive-messaging-api.version>1.0</microprofile-reactive-messaging-api.version>
 
-        <!-- Artifacts 依赖版本 -->
-        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
 
     </properties>
 
@@ -138,6 +139,13 @@
                 <groupId>javax.inject</groupId>
                 <artifactId>javax.inject</artifactId>
                 <version>${javax.inject.version}</version>
+            </dependency>
+
+            <!-- Java Interceptor API -->
+            <dependency>
+                <groupId>javax.interceptor</groupId>
+                <artifactId>javax.interceptor-api</artifactId>
+                <version>${javax.interceptor-api.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -472,6 +480,13 @@
                 <groupId>javax.enterprise</groupId>
                 <artifactId>cdi-api</artifactId>
                 <version>${javax.cdi-api.version}</version>
+            </dependency>
+
+            <!-- CGLIB -->
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
             </dependency>
 
         </dependencies>
