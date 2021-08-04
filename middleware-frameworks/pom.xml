@@ -18,6 +18,7 @@
         <module>my-commons</module>
         <module>my-interceptor</module>
         <module>my-dependency-injection</module>
+        <module>my-cache</module>
     </modules>
 
     <properties>

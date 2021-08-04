@@ -80,7 +80,10 @@
         <javax.cdi-api.version>2.0</javax.cdi-api.version>
         <javax.interceptor-api.version>1.2</javax.interceptor-api.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <javax.cache-api.version>1.1.1</javax.cache-api.version>
         <cglib.version>3.3.0</cglib.version>
+        <lettuce.version>6.1.0.RELEASE</lettuce.version>
+        <jedis.version>3.5.2</jedis.version>
 
 
         <!-- api documentation -->
@@ -487,6 +490,26 @@
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
                 <version>${cglib.version}</version>
+            </dependency>
+
+            <!-- Java Cache API -->
+            <dependency>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>${javax.cache-api.version}</version>
+            </dependency>
+
+            <!-- Redis Java Client - Lettuce -->
+            <dependency>
+                <groupId>io.lettuce</groupId>
+                <artifactId>lettuce-core</artifactId>
+                <version>${lettuce.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
             </dependency>
 
         </dependencies>
