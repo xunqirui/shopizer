@@ -2,9 +2,11 @@ package org.geektimes.cache.interceptor;
 
 import org.geektimes.interceptor.AnnotatedInterceptor;
 
+import javax.cache.Cache;
 import javax.cache.CacheManager;
 import javax.cache.Caching;
 import javax.cache.annotation.CacheRemove;
+import javax.cache.configuration.MutableConfiguration;
 import javax.cache.spi.CachingProvider;
 import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
@@ -28,15 +30,29 @@ public class CacheRemoveInterceptor extends AnnotatedInterceptor<CacheRemove> {
         boolean afterInvocation = cacheRemove.afterInvocation();
         if (afterInvocation) {
             result = context.proceed();
-            removeCache(cacheName);
+            doRemoveCache(cacheName, context.getParameters()[0]);
         } else {
-            removeCache(cacheName);
+            doRemoveCache(cacheName, context.getParameters()[0]);
             result = context.proceed();
         }
         return result;
     }
 
-    private void removeCache(String cacheName) {
-        cacheManager.destroyCache(cacheName);
+    private void doRemoveCache(String cacheName, Object key) {
+        Cache cache = getCache(cacheName);
+        if (key != null) {
+            cache.remove(key);
+        }
     }
+
+    private Cache getCache(String cacheName) {
+        Cache cache = cacheManager.getCache(cacheName);
+        if (cache == null) {
+            cache = cacheManager.createCache(cacheName,
+                    new MutableConfiguration().setTypes(Object.class, Object.class));
+        }
+        return cache;
+    }
+
+
 }

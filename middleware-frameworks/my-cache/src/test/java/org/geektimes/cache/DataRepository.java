@@ -30,7 +30,7 @@ public interface DataRepository {
     @CachePut(cacheName = "simpleCache")
     boolean create(String name, Object value);
 
-    @CacheRemove(cacheName = "removeCache")
+    @CacheRemove(cacheName = "simpleCache")
     boolean remove(String name);
 
     Object get(String name);
