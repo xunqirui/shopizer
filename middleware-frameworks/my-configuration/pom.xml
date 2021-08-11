@@ -30,6 +30,26 @@
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>
+
+        <!-- Internal Artifacts -->
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>my-commons</artifactId>
+            <version>${version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Netflix Archaius -->
+        <dependency>
+            <groupId>com.netflix.archaius</groupId>
+            <artifactId>archaius-core</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

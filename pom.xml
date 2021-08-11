@@ -84,6 +84,7 @@
         <cglib.version>3.3.0</cglib.version>
         <lettuce.version>6.1.0.RELEASE</lettuce.version>
         <jedis.version>3.5.2</jedis.version>
+        <archaius.version>0.6.0</archaius.version>
 
 
         <!-- api documentation -->
@@ -510,6 +511,13 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
+            </dependency>
+
+            <!-- Netflix -->
+            <dependency>
+                <groupId>com.netflix.archaius</groupId>
+                <artifactId>archaius-core</artifactId>
+                <version>${archaius.version}</version>
             </dependency>
 
         </dependencies>
