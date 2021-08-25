@@ -85,6 +85,7 @@
         <lettuce.version>6.1.0.RELEASE</lettuce.version>
         <jedis.version>3.5.2</jedis.version>
         <archaius.version>0.6.0</archaius.version>
+        <activemq.version>5.9.1</activemq.version>
 
 
         <!-- api documentation -->
@@ -465,6 +466,12 @@
                 <version>${microprofile-fault-tolerance-api.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.eclipse.microprofile.reactive.messaging</groupId>
+                <artifactId>microprofile-reactive-messaging-api</artifactId>
+                <version>${microprofile-reactive-messaging-api.version}</version>
+            </dependency>
+
             <!-- Servlet 3.1 API -->
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -518,6 +525,13 @@
                 <groupId>com.netflix.archaius</groupId>
                 <artifactId>archaius-core</artifactId>
                 <version>${archaius.version}</version>
+            </dependency>
+
+            <!-- Apache ActiveMQ -->
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
+                <version>${activemq.version}</version>
             </dependency>
 
         </dependencies>
