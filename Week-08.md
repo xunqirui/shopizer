@@ -50,7 +50,7 @@ public void onNext(T t) {
     if (WIP.get(this) == 0 && WIP.compareAndSet(this, 0, 1)) {
         actual.onNext(t);
         // 由于上面的 if 判断将 WIP 置为 1 了，所以在减了 1 之后
-        // WIP 变为 0 ，改条件一直不成立
+        // WIP 变为 0 ，所以该条件一直不成立
         if (WIP.decrementAndGet(this) != 0) {
             Throwable ex = Exceptions.terminate(ERROR, this);
             if (ex != null) {
