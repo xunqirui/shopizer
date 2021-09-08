@@ -1,0 +1,1 @@
+resilience4j.dubbo.provider.filter=com.resilience.Resilience4JDubboProviderFilter

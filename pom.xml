@@ -86,6 +86,8 @@
         <jedis.version>3.5.2</jedis.version>
         <archaius.version>0.6.0</archaius.version>
         <activemq.version>5.9.1</activemq.version>
+        <dubbo.version>2.7.11</dubbo.version>
+        <resilience4j.version>1.7.1</resilience4j.version>
 
 
         <!-- api documentation -->
@@ -533,6 +535,29 @@
                 <artifactId>activemq-all</artifactId>
                 <version>${activemq.version}</version>
             </dependency>
+
+            <!-- Dubbo -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-rpc-dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+
+            <!-- resilience4j -->
+            <dependency>
+                <groupId>io.github.resilience4j</groupId>
+                <artifactId>resilience4j-bulkhead</artifactId>
+                <version>${resilience4j.version}</version>
+            </dependency>
+
+
 
         </dependencies>
 

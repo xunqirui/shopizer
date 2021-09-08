@@ -1,7 +1,6 @@
 package org.geektimes.event.jms;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.apache.activemq.command.ActiveMQTextMessage;
 import org.geektimes.event.EventListener;
 import org.geektimes.event.distributed.DistributedEventObject;
 import org.geektimes.event.reactive.stream.ListenerSubscriberAdapter;
@@ -9,8 +8,6 @@ import org.geektimes.reactive.streams.SimplePublisher;
 
 import javax.jms.*;
 import java.util.EventObject;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  * JmsEventPublisher

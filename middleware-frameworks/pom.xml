@@ -20,6 +20,7 @@
         <module>my-dependency-injection</module>
         <module>my-cache</module>
         <module>my-reactive-messaging</module>
+        <module>dubbo</module>
     </modules>
 
     <properties>
