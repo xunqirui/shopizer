@@ -21,6 +21,8 @@
         <module>my-cache</module>
         <module>my-reactive-messaging</module>
         <module>dubbo</module>
+        <module>spring-boot-starter-custom</module>
+        <module>spring-boot-test</module>
     </modules>
 
     <properties>
